@@ -28,3 +28,4 @@ ol.steps li{margin:6px 0}
 dl.faq dt{font-weight:bold;margin-top:10px}dl.faq dd{margin:2px 0 0 0}
 ul.src{font-size:14px;word-break:break-all}
 @media print{body{background:#fff}section,.toc{break-inside:avoid-page;border-color:#999}.grid{grid-template-columns:repeat(3,1fr)}}
+a.dl{display:block;text-align:center;background:var(--accent);color:#fff;font-weight:bold;border-radius:10px;padding:12px;min-height:48px;text-decoration:none}
