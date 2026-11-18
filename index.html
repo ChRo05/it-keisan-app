@@ -251,6 +251,7 @@ const INTERVALS = [1, 3, 7, 14, 30]; // 定着したあと、次に出すまで�
 const QBY = Object.fromEntries(DATA.questions.map(q => [q.id, q]));
 const CBY = Object.fromEntries(DATA.chapters.map(c => [c.no, c]));
 const STORE_KEY = "itkeisan.v1";
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScJ5SWiet8DPegAOERjejbaxEV-Qj34smFsM0lnfbqa3cr7pQ/viewform"; // 誤り報告・感想フォーム（事務局）
 
 function today(d) {
   const t = d || new Date();
@@ -990,6 +991,10 @@ function vSettings(arg) {
         h("li", null, "iPhone・iPadは、Safariの共有ボタン（四角から矢印が出たマーク）→「ホーム画面に追加」で、ホーム画面から開いてください。"),
         h("li", null, "記録タブの「記録を書き出す」で、ファイルに残せます。別の端末では「記録を読み込む」で戻せます。")),
       h("p", { class: "sub" }, "記録はこの端末のブラウザの中だけにあります。どこにも送りません。")),
+    h("section", { class: "card stack", id: "report" }, h("h2", null, "誤り報告・感想"),
+      h("p", null, "問題のまちがいや、使いにくいところを教えてください。1〜2分で終わります。名前は書きません。"),
+      h("p", { class: "sub" }, "まちがいの報告には、問題の上にある番号（例：IT-08-001）を書いてください。フォームはGoogleフォームで開きます（通信が必要です）。"),
+      h("a", { class: "btn primary wide", href: FORM_URL, target: "_blank", rel: "noopener", style: "display:flex;align-items:center;justify-content:center;text-decoration:none" }, "フォームを開く")),
     lessonUrlCard());
   if (arg === "howto") setTimeout(() => { const el = document.getElementById("howto"); if (el) el.scrollIntoView(); }, 0);
   return box;
