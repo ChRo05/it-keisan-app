@@ -905,4 +905,8 @@ function boot() {
 }
 window.addEventListener("hashchange", boot);
 boot();
+/* 一度開けば、通信のない所でも開けるようにする（GitHub Pages で開いたときだけ。保存したファイルで開いたときは使わない） */
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+  navigator.serviceWorker.register("./sw.js").catch(() => { /* 使えなくてもアプリは動く */ });
+}
 })();
