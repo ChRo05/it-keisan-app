@@ -1,0 +1,9 @@
+.env
+__pycache__/
+test/fields.json
+test/ch8/
+test/shots/
+# master and internal notes are not published
+data/
+docs/1118_実装メモ.md
+manual/img/
