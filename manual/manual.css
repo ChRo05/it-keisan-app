@@ -1,0 +1,30 @@
+:root{--bg:#E9EFF2;--paper:#FFFFFF;--ink:#14283A;--sub:#4A5D6C;--line:#C3D0D8;--accent:#0B5CAD;--ok:#00704A;--ng:#B3261E;--mark:#FFE873;--soft:#DCE7EE}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"UD デジタル 教科書体 NK-R","UD Digi Kyokasho NK-R","BIZ UDPGothic","Hiragino Sans","Meiryo",sans-serif;font-size:17px;line-height:1.7;letter-spacing:.04em}
+main{max-width:860px;margin:0 auto;padding:16px}
+section,.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0}
+h1{font-size:26px;margin:12px 0 4px}h2{font-size:21px;margin:0 0 10px;border-left:6px solid var(--accent);padding-left:10px}h2.h0{border:0;padding:0;font-size:19px}h3{font-size:18px;margin:16px 0 6px}
+.sub{color:var(--sub);font-size:14px}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink);background:var(--paper);border-radius:12px;padding:6px 12px;font-weight:bold;font-size:14px}
+.badge svg{width:22px;height:18px}.badge .bar{width:1.5px;height:18px;background:var(--ink)}
+.open{display:flex;gap:18px;align-items:center;flex-wrap:wrap;border:2px solid var(--accent)}
+.qr svg{width:170px;height:170px;display:block;background:#fff}
+.url{font-size:18px;font-weight:bold;word-break:break-all}
+a{color:var(--accent)}
+.toc ol{columns:2;margin:0;padding-left:1.4em}@media (max-width:560px){.toc ol{columns:1}}
+ol.big li{font-size:19px;margin:4px 0}
+.fig{background:var(--bg);border-radius:10px;padding:10px;margin:10px 0}.fig svg{width:100%;height:auto;display:block}
+figure.shot{margin:10px auto;text-align:center}figure.shot img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px}
+figcaption{font-size:14px;color:var(--sub);margin-top:4px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+@media (max-width:560px){.pair{grid-template-columns:1fr}}
+.pair figure.shot,.grid figure.shot{max-width:none!important;margin:0}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}th,td{border-bottom:1px solid var(--line);padding:6px;text-align:left;vertical-align:top}th{background:var(--soft)}
+.note{background:var(--soft);border-radius:10px;padding:10px 14px;font-size:15px}
+.warn{background:var(--mark);border-radius:10px;padding:10px 14px}
+.warn ul{margin:4px 0}
+ol.steps li{margin:6px 0}
+.code{font-family:inherit;background:var(--soft);padding:8px 12px;border-radius:8px;word-break:break-all;font-size:14px}
+dl.faq dt{font-weight:bold;margin-top:10px}dl.faq dd{margin:2px 0 0 0}
+ul.src{font-size:14px;word-break:break-all}
+@media print{body{background:#fff}section,.toc{break-inside:avoid-page;border-color:#999}.grid{grid-template-columns:repeat(3,1fr)}}
